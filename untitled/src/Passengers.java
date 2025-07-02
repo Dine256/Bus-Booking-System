@@ -18,7 +18,7 @@ public class Passengers {
 
     public static class busbooking {
 
-        static Passengers[] seats = new Passengers[54];
+        static Passenger[] seats = new Passenger[54];
 
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
@@ -73,7 +73,7 @@ public class Passengers {
 
 
 
-            seats[snum-1]=new Passengers(name,age,gender);
+            seats[snum-1]=new Passenger(name,age,gender);
             System.out.println("seat "+snum+" booked");
         }
 

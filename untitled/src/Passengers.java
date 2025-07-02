@@ -43,7 +43,14 @@ public class Passengers {
         }
 
         static void busbook(Scanner sc){
-            System.out.println("Enter your Setnumber");
+
+            System.out.println("Seat Preference" +
+                    " 1.window " +
+                    " 2.normal");
+            int preference=sc.nextInt();
+            Seatpre(preference);
+
+            System.out.println("Enter your Seatnumber");
             int snum=sc.nextInt();
 
             if(snum <1 || snum>54){
@@ -62,6 +69,10 @@ public class Passengers {
             System.out.println("Enter Gender M/F:");
             String gender= sc.next();
 
+
+
+
+
             seats[snum-1]=new Passengers(name,age,gender);
             System.out.println("seat "+snum+" booked");
         }
@@ -76,11 +87,28 @@ public class Passengers {
             }
         }
 
+        static void Seatpre(int pre){
+            for(int i=1;i< seats.length;i++){
+
+                if(pre==1){
+                    if(i%4==1){
+                        System.out.println("window :"+i);
+                    }
+                    if(i%4==0){
+                        System.out.println("window :"+i);
+                    }
+                }
+                else if(pre==2) {
+                    if(i%4==1){
+                        continue;
+                    }
+                    if(i%4==0){
+                        continue;
+                    }
+                    else
+                        System.out.println("normal :"+i);
+                }
+            }
+        }
     }
-
 }
-
-
-
-
-
